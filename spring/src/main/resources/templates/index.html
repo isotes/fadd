@@ -1,0 +1,26 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>fractions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+    <h2>Adding Fractions</h2>
+    <h3 th:if="${result}" th:text="'Result: ' + ${result}"></h3>
+    <p>
+    <form action="result" method="get">
+        Add
+        <input type="number" name="na" size="4" value="1" style="width: 3em;">
+        / <input type="number" name="da" size="4" value="1" style="width: 3em;">
+        +
+        <input type="number" name="nb" size="4" value="1" style="width: 3em;">
+        / <input type="number" name="db" size="4" value="1" style="width: 3em;">
+        <input type="submit">
+    </form>
+    </p>
+    <p>
+        ... or try <a href="result?na=1&da=2&nb=1&db=4">1/2 + 1/4</a><br>
+        ...or <a href="result?na=1&da=10&nb=1&db=100">1/10 + 1/100</a>
+    </p>
+</body>
+</html>

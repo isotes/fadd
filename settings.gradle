@@ -1,0 +1,6 @@
+rootProject.name = 'fadd'
+
+include 'library'
+include 'cli'
+include 'spring'
+include 'webapp'

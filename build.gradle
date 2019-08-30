@@ -1,0 +1,7 @@
+allprojects {
+	group = 'io.github.isotes.fadd'
+	version = '1.0.0-SNAPSHOT'
+	repositories {
+		mavenCentral()
+	}
+}
