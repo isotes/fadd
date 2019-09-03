@@ -1,5 +1,8 @@
 # Add Fractions
-Small experiment for a Gradle multi-project with a library, a CLI, and simple servlet, and a Spring service.
+Small experiment for a Gradle multi-project with a library, a CLI, a simple servlet, a Spring service, and a OpenJFX GUI.
+
+## Requirements
+The OpenJFX GUI requires JDK 11. The other modules work also with JDK 8.
 
 ## Building & Running
 ```bash
@@ -17,6 +20,15 @@ java -jar spring/build/libs/fadd-spring-1.0.0-SNAPSHOT.war
 
 # run CLI
 ./cli/build/install/fadd/bin/fadd 1 2 1 4
+
+# run OpenJFX GUI
+./gradlew jfxui:run
+
+# build OpenJFX GUI extracted distribution
+./gradlew installDist
+
+# run OpenJFX GUI jar
+./jfxui/build/install/fadd-ui/bin/fadd-ui
 ```
 
 ## Servlet
@@ -39,6 +51,9 @@ The produced `war` file can be executed directly like a `jar` file or deployed t
 
 ## CLI
 The CLI expects the two nominator denominator pairs and shows usage information when called without parameters. For example to add a half and a quarter, run `./cli/build/install/fadd/bin/fadd 1 2 1 4`.
+
+### OpenJFX GUI
+Then OpenJFX based UI can be built as described above.
 
 ## License
 [The Unlicense](LICENSE).

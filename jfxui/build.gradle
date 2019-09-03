@@ -1,0 +1,26 @@
+plugins {
+	id 'application'
+	id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+application {
+	mainClassName = 'io.github.isotes.fadd.jfxui.JfxMain'
+	applicationName = rootProject.name + '-ui'
+}
+
+javafx {
+	version = "11.0.2"
+	modules = [ 'javafx.controls' ]
+}
+
+sourceCompatibility = '1.11'
+
+test {
+	useJUnitPlatform()
+}
+
+dependencies {
+	compile project(':library')
+
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.5.1'
+}

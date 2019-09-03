@@ -1,12 +1,13 @@
 plugins {
 	id 'war'
-	id 'org.gretty' version '2.2.0'
+	id 'org.gretty' version '2.3.1'
 }
 
 sourceCompatibility = '1.8'
 
-repositories {
-	jcenter()
+gretty {
+	// 'jetty9.4' and 'tomcat9' are working also with JDK 11
+	servletContainer = 'jetty9.4'
 }
 
 war {
