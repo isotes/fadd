@@ -26,7 +26,6 @@ public class FaddJfxApp extends Application {
 			int da = Integer.parseInt(tfDa.getText());
 			int nb = Integer.parseInt(tfNb.getText());
 			int db = Integer.parseInt(tfDb.getText());
-			System.out.println(na + "_" + da + "_" + nb + "_" + db);
 			Fraction r = FMath.add(na, da, nb, db);
 			tfNr.setText(Integer.toString(r.getNumerator()));
 			tfDr.setText(Integer.toString(r.getDenominator()));
